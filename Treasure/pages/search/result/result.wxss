@@ -1,0 +1,129 @@
+.search {
+  /* position: fixed; 悬停搜索框的关键样式 */
+  z-index: 999;
+  display: flex;
+  background-color: #ccc;
+}
+
+.search-f {
+  left: 75rpx;
+  width: 80%;
+  background-color: #fff;
+}
+
+.search-m {
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.search-rp {
+  width: 85%;
+  display: flex;
+  height: 70rpx;
+  align-items: center;
+}
+
+.search-img {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 20rpx;
+}
+
+.search-ipt {
+  width: 100%;
+  font-size: 24rpx;
+  margin: 0 40rpx 0 10rpx;
+}
+
+.search-btn {
+  right: 0;
+  background-color: #ffc90e;
+  width: 15%;
+  position: absolute;
+  font-size: 30rpx;
+  align-items: center;
+  height: 70rpx;
+  display: flex;
+  padding-left: 30rpx;
+}
+
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods-container {
+  margin: 10rpx 10rpx 0 10rpx;
+  background-color: #fff;
+  display: flex;
+}
+
+.goods:not(:first-child) {
+  display: flex;
+  justify-content: space-between;
+  margin: 25rpx 10rpx 10rpx 0;
+}
+
+.goodsPic {
+  height: 242rpx;
+  padding: 1rpx 0;
+}
+
+.goodsPic .pic {
+  width: 320rpx;
+  height: 240rpx;
+}
+
+.goodsDes {
+  margin-left: 30rpx;
+}
+
+.goodsName {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.goodsName .pic {
+  width: 32rpx;
+  height: 32rpx;
+  top: 8rpx;
+  position: relative;
+}
+
+.goodsName .name {
+  margin-left: 10rpx;
+}
+
+.goodsPrice {
+  font-size: 20rpx;
+  color: #666;
+}
+
+.goodsPrice .price {
+  text-decoration: line-through;
+}
+
+.goodsCoupon {
+  font-size: 28rpx;
+  color: #e64340;
+}
+
+.goodsCoupon .couponPic {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.goodsCoupon .coupon {
+  font-weight: bolder;
+  border: 1rpx dashed #e64340;
+  height: 32rpx;
+  width: 80rpx;
+  text-align: right;
+  margin: 6rpx 0 0 -50rpx;
+  line-height: 36rpx;
+}
+
+.goodsCoupon .final {
+  margin:2rpx 0 0 10rpx
+}

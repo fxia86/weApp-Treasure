@@ -1,0 +1,35 @@
+<!-- <view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="bar {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap" wx:key="">{{item}}</text>
+</view> -->
+<scroll-view scroll-x scroll-with-animation class="navbar">
+<view wx:for="{{catagory}}" data-idx="{{index}}" class="bar {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap" wx:key="">{{item}}</view>
+</scroll-view>
+<view class=".goods-list">
+  <view class="goods-container" wx:for="{{goods}}" bindtap='gotoDetail' data-idx="{{index}}" data-goodsID="{{item.num_iid}}" wx:key="">
+    <view class="goods">
+      <image class="pic" src="{{item.pict_url}}"></image>
+    </view>
+    <view class="goods name">
+      <image class="pic" src="{{item.user_type==1?'/images/icon/tm.png':'/images/icon/tb.png'}}"></image>
+      <view class="name">{{item.title}}</view>
+    </view>
+    <view class="goods price">
+      <view class="yj">原价 ￥{{item.zk_final_price}}</view>
+      <view class="xl">销量 {{item.volume}}</view>
+    </view>
+    <view class="goods coupon">
+      <view class="lqj">领券价 ￥{{item.final_price||item.zk_final_price}}</view>
+      <image class="couponPic" src="/images/icon/coupon.png"></image>
+      <view class="q">{{item.coupon_price||0}}</view>
+    </view>
+  </view>
+</view>
+<!-- <view hidden="{{currentTab!==1}}">
+  tab_02
+</view>
+<view hidden="{{currentTab!==2}}">
+  tab_03
+</view>
+<view hidden="{{currentTab!==3}}">
+  tab_04
+</view> -->

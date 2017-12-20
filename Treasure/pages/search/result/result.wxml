@@ -1,0 +1,30 @@
+<!--pages/search/result/result.wxml-->
+<view class="search {{search_style}}" style="top:{{search_top}};">
+  <view class="search-rp">
+    <image class="search-img" src="/images/icon/ss.png"></image>
+    <input class="search-ipt" placeholder="{{queryString}}的搜索结果" bindinput='contentInput' bindconfirm="search" confirm-type="search" />
+    <view class="search-btn" bindtap='search'>搜 索</view>
+  </view>
+</view>
+<view class="goods-list">
+  <view class="goods-container" wx:for="{{goods}}" bindtap='gotoDetail' data-goodsID="{{item.num_iid}}" data-idx="{{index}}" wx:key="">
+    <view class="goodsPic">
+      <image class="pic" src="{{item.pict_url}}"></image>
+    </view>
+    <view class="goodsDes">
+      <view class="goods goodsName">
+        <image class="pic" src="{{item.user_type==1?'/images/icon/tm.png':'/images/icon/tb.png'}}"></image>
+        <text class="name">{{item.title}}</text>
+      </view>
+      <view class="goods goodsPrice">
+        <view class="xl">销量 {{item.volume}}</view>
+        <view class="price">原价 ￥{{item.zk_final_price}}</view>
+      </view>
+      <view class="goods goodsCoupon">
+        <image class="couponPic" src="/images/icon/coupon.png"></image>
+        <view class="coupon"><text>{{item.coupon_price||0}}</text></view>
+        <view class="final">领券价 ￥{{item.final_price||item.zk_final_price}}</view>
+      </view>
+    </view>
+  </view>
+</view>

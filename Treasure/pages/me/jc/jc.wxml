@@ -1,0 +1,15 @@
+<!--按钮-->  
+<!-- <view style="{{isShowToast?'position:fixed;':''}}">  
+  <view class="btn" bindtap="clickBtn">button</view>  
+</view>   -->
+  
+<!--mask-->  
+<!--以下为toast显示的内容-->  
+<!-- <view class="toast_content_box" wx:if="{{isShowToast}}">  
+  <view class="toast_content">  
+    <view class="toast_content_text">  
+      {{toastText}}  
+    </view>  
+  </view>  
+</view> -->
+<view class="body"></view>

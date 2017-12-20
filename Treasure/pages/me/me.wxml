@@ -1,0 +1,58 @@
+<view class="header">
+  <view wx:if="{{!hasUserInfo}}">
+    <button class="login" size="mini" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+  </view>
+  <view wx:else>
+    <image class="avartar" src="{{userInfo.avatarUrl}}"></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+</view>
+
+<view class="body">
+  <view class="bonus">
+    <view class="bonusOption" bindtap='signOn'>
+      <image src="/images/icon/qd.png"></image>
+      <text class='option'>签到<text class='red'>+{{hasUserInfo?signedPoints:0}}</text>积分</text>
+    </view>
+    <view class="bonusOption" bindtap='comingSoon'>
+      <image src="/images/icon/fx.png"></image>
+      <text class='option'>分享<text class='red'>+{{hasUserInfo?sharedPoints:0}}</text>积分</text>
+    </view>
+    <view class="bonusOption">
+      <image src="/images/icon/dh.png"></image>
+      <text class='option'>兑换<text class='green'>-{{hasUserInfo?usedPoints:0}}</text>积分</text>
+    </view>
+    <view class="bonusOption">
+      <image src="/images/icon/jf.png"></image>
+      <text class='option'>累计<text class='red'>{{hasUserInfo?signedPoints+sharedPoints-usedPoints:0}}</text>积分</text>
+    </view>
+  </view>
+  <view class="nav">
+    <navigator class="mt" url="jc/jc">
+      <image src="/images/icon/jc.png"></image>
+      <view class="navText">搜券指引</view>
+    </navigator>
+    <navigator bindtap='showRule'>
+      <image src="/images/icon/gz.png"></image>
+      <view class="navText">积分规则</view>
+    </navigator>
+    <navigator url="../favorites/favorites" bindtap='comingSoon'>
+      <image src="/images/icon/cj.png"></image>
+      <view class="navText">积分抽奖</view>
+    </navigator>
+    <navigator url="../favorites/favorites" bindtap='comingSoon'>
+      <image src="/images/icon/sc.png"></image>
+      <view class="navText">积分商城</view>
+    </navigator>
+    <navigator class="mt" url="../favorites/favorites">
+      <image src="/images/icon/jc.png"></image>
+      <view class="navText">联系客服</view>
+    </navigator>
+  </view>
+</view>
+<modal class="" hidden="{{!showRuleModal}}" no-cancel bindconfirm="hideRule" confirmText="知道啦">
+  <view class="">
+    <!-- <image src="../../images/ts.png" alt="" class="age"></image> -->
+    <view class="">签到得10积分，分享得*积分，积分可以抽奖或在商城兑换礼品哦！</view>
+  </view>
+</modal>

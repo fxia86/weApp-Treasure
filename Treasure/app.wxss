@@ -1,0 +1,20 @@
+/**app.wxss**/
+page {
+  background-color: #F5F5F5;
+  height: 100%;
+  font:32rpx/1.5 "Microsoft YaHei";
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: yellowgreen;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

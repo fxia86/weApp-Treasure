@@ -1,0 +1,65 @@
+/* pages/search/search.wxss */
+
+.header {
+  height: 400rpx;
+  background-image: url(http://xiafeng.xyz/img/search_hd.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.body {
+  height: 3000rpx;
+  background-image: url(http://xiafeng.xyz/img/search_bd.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.search {
+  position: fixed; /*悬停搜索框的关键样式*/
+  z-index: 999;
+  display: flex;
+}
+
+.search-f {
+  left: 75rpx;
+  width: 80%;
+  background-color: #fff;
+}
+
+.search-m {
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.search-rp {
+  width: 85%;
+  display: flex;
+  height: 70rpx;
+  align-items: center;
+}
+
+.search-img {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 20rpx;
+}
+
+.search-ipt {
+  width: 100%;
+  font-size: 24rpx;
+  margin: 0 40rpx 0 10rpx;
+}
+
+.search-btn {
+  right: 0;
+  background-color: #ffc90e;
+  width: 15%;
+  position: absolute;
+  font-size: 30rpx;
+  font-weight: bolder;
+  align-items: center;
+  height: 70rpx;
+  display: flex;
+  padding-left: 30rpx;
+}

@@ -1,0 +1,130 @@
+/*header*/
+
+.header {
+  position: relative;
+  height: 240rpx;
+  width: 750rpx;
+  /* background-color: #FFA07A; */
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e64340), to(rgba(240, 230, 140, 0.5)));
+}
+
+.login {
+  left: 50%; 
+  margin:90rpx 0 0 -60rpx;
+}
+
+.avartar {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  margin: 0 0 0 -64rpx;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.nickname {
+  width: 750rpx;
+  position: absolute;
+  bottom: 10rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+}
+
+/*body */
+
+.bonus {
+  width: 750rpx;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #666;
+  background-color: #fff;
+  display: flex;
+}
+
+.bonusOption {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 35rpx;
+}
+
+.bonusOption image {
+  width: 48rpx;
+  height: 48rpx;
+  margin: 10rpx 30rpx;
+}
+
+.bonusOption .option {
+  font-size: 24rpx;
+  color: #666;
+  margin: 0 -20rpx 0 -10rpx;
+}
+
+/* .nav{
+  display: flex;
+  align-items: center;
+} */
+
+navigator {
+  position: relative;
+  padding: 25rpx 30rpx;
+  height: 34rpx;
+  background: #fff;
+  /* border-bottom: 1rpx #ccc solid; */
+}
+
+navigator.mt {
+  margin-top: 30rpx;
+}
+
+navigator:before {
+  position: absolute;
+  content: "";
+  left: 30rpx;
+  right: 0;
+  top: 0;
+  height: 1px;
+  border-top: 1rpx solid #d8d8d8;
+  color: #d8d8d8;
+}
+
+navigator.mt {
+  margin-top: 30rpx;
+}
+
+navigator.mt:before {
+  display: none;
+}
+
+navigator:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 30rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-top: 1rpx solid #999;
+  border-right: 1rpx solid #999;
+  transform: translate(0, -50%) rotate(45deg);
+}
+
+navigator image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: -6rpx;
+}
+
+.navText {
+  margin: -55rpx 0 0 80rpx;
+  font-size: 28rpx;
+}
+
+/* 
+.publish:before {
+  background-image: url("https://s.kcimg.cn/app/images/matching/posted.png");
+}
+
+.favorite:before {
+  background-image: url("https://s.kcimg.cn/app/images/matching/collected.png");
+} */

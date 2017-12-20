@@ -1,0 +1,10 @@
+<!--pages/search/search.wxml-->
+<view class="header"></view>
+<view class="body"></view>
+<view class="search {{search_style}}" style="top:{{search_top}};">
+  <view class="search-rp">
+    <image class="search-img" src="/images/icon/ss.png"></image>
+    <input class="search-ipt" placeholder="商品名称或关键字" bindinput='contentInput' bindconfirm="search" confirm-type="search" />
+    <view class="search-btn" bindtap='search'>搜 索</view>
+  </view>
+</view>
